@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <h1>Calculadora</h1>
+    <form action="index.html" method="post" id="form">
+      <label for="number1"></label>
+      <input
+        type="number"
+        name="number1"
+        id="number1"
+        placeholder="Insira um número"
+      />
+      <br />
+      <br />
+
+      <label for="number2"></label>
+      <input
+        type="number"
+        name="number2"
+        id="number2"
+        placeholder="Insira um número"
+      />
+
+      <br />
+      <br />
+      <div class="buttons">
+        <button id="btn-somar" type="submit">+</button>
+        <button id="btn-diminuir" type="submit">-</button>
+        <button id="btn-dividir" type="submit">/</button>
+        <button id="btn-multiplicar" type="submit">x</button>
+      </div>
+    </form>
+
+    <div class="showResults"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

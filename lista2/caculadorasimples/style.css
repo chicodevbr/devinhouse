@@ -1,0 +1,20 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin: 0px auto;
+}
+
+button {
+  width: 60px;
+}
+
+.showResults {
+  display: none;
+}

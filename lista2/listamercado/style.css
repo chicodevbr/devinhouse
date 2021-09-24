@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+}
+
+#form {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 0 auto;
+  background: mintcream;
+  padding: 10px;
+  width: 300px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.container-add {
+  display: flex;
+  flex-direction: row;
+}
+
+.amount {
+  width: 50px;
+  font-family: monospace;
+  border-radius: 5px;
+  padding: 8px;
+  box-shadow: rgb(100 100 111 / 10%) 0px 7px 29px 0px;
+  margin-top: 10px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.btn-show-add-item {
+  font-family: monospace;
+  border: 1px solid DarkSlateGray;
+  border-radius: 5px;
+  padding: 10px;
+  background: Gainsboro;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+.btn-add-item {
+  font-family: monospace;
+  border: 1px solid CornflowerBlue;
+  border-radius: 5px;
+  padding: 8px;
+  box-shadow: rgb(100 100 111 / 10%) 0px 7px 29px 0px;
+  background: DodgerBlue;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.alert {
+  display: none;
+}
+
+.selected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin: 20px;
+  font-size: 14px;
+}
+
+.card {
+  display: flex;
+  width: 500px;
+  border: 1px solid #eee;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgb(100 100 111 / 10%) 0px 7px 29px 0px;
+}

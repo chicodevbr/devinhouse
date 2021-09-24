@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lista Mercado</title>
+  </head>
+  <body>
+    <header>
+      <h1>Lista de Compras</h1>
+
+      <div class="btn-container">
+        <button class="btn-show-add-item" onclick="showAddItemModal()">
+          Adicionar Produtos
+        </button>
+      </div>
+    </header>
+
+    <form action="index.html" method="post" id="form">
+      <label for="new-item">Adicione os itens que deseja</label>
+      <input type="text" name="new-item" id="new-item" />
+
+      <div class="container-add">
+        <input
+          class="amount"
+          type="number"
+          name="new-item-amount"
+          id="new-item-amount"
+          placeholder="1"
+          min="1"
+          value="1"
+        />
+
+        <button class="btn-add-item" type="submit">Enviar</button>
+      </div>
+      <div class="alert"></div>
+    </form>
+    <div class="selected"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
