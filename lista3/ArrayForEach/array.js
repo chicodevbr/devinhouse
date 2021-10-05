@@ -5,15 +5,14 @@ let frutas = ['banana', 'morango', 'maçã', 'uva', 'pera'];
 //array
 // multiplicar array[1] por array[0], array[2] por arrary[1]
 
-let arr = [2, 4, 6, 8];
-let result = [];
+const arr = [2, 4, 6, 8];
+// let result = [];
 
-arr.map((element, index) => {
+const result = arr.map((element, index) => {
   if (index === 0) {
     return element;
   } else {
-    result.push(element * arr[index - 1]);
-    return result;
+    return element * arr[index - 1];
   }
 });
 
