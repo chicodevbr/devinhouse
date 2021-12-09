@@ -15,7 +15,13 @@ function compareArrays(a1, a2) {
   );
 }
 
+function getData() {
+  const result = JSON.parse(fs.readFileSync('src/db/' + 'user.json', 'utf8'));
+  return result;
+}
+
 module.exports = {
   createFolder,
   compareArrays,
+  getData,
 };
