@@ -1,7 +1,8 @@
 const express = require('express');
-const router = express.Router();
 const controller = require('../controllers/list');
 
-router.get('/', controller.get);
+const router = express.Router();
+
+router.patch('/', controller.updateList);
 
 module.exports = router;

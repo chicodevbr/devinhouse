@@ -6,9 +6,13 @@ const fs = require('fs');
 
 app.use(cors());
 app.use(express.json());
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
 
 const indexRouter = require('./server/routes/index');
-const listRouter = require('./server/controllers/list');
 
 app.use('/', indexRouter);
 //app.use('/list', listRouter);
