@@ -1,5 +1,7 @@
-const { getData } = require('../../util');
+const { query } = require('express');
+const { getData, createOrUpdateFolderAndData } = require('../../util');
 const Services = require('../service');
+const fs = require('fs');
 
 exports.index = async (req, res) => {
   console.log('API version 1.0.0');
@@ -81,4 +83,37 @@ exports.getDate = async (req, res) => {
   console.log(calendar);
 
   res.json(calendar);
+};
+
+exports.createAndSaveFolder = async (req, res) => {
+  const { data, folder } = req.body;
+
+  createOrUpdateFolderAndData(data, folder);
+  res.status(201).json({ message: 'Arquivo salvo com sucesso' });
+};
+
+exports.getFilter = async (req, res) => {
+  const { job, state, ageMin, ageMax } = req.query;
+  const existKey = Object.keys(req.query).filter((item) => {
+    if (req.query[item]) return { [item]: req.query[item] };
+  });
+
+  const filterKeys = existKey.filter((item) => item);
+
+  console.log(filterKeys);
+
+  if (fs.lstatSync('src/db/' + 'user.json').isFile()) {
+    const users = JSON.parse(fs.readFileSync('src/db/' + 'user.json', 'utf8'));
+    const filterUsers = users.filter((item) => {
+      if (item.age <= ageMax && item.age >= ageMin) {
+        return item;
+      }
+    });
+    const firstLogic = users.filter((item) => item.age <= ageMax);
+
+    if (ageMax >= users.filter((item) => item))
+      return res.status(201).json({ users: filterUsers });
+  }
+  fs.writeFileSync('src/db/' + 'user.json', JSON.stringify(req.body));
+  return res.status(201).JSON({ message: 'Hello world' });
 };
