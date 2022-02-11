@@ -12,6 +12,12 @@ class CategoryControllers {
 
     return res.json(user);
   }
+
+  async show(req, res) {
+    const { id } = req.params;
+    const category = await Category.findByPk(id);
+    return res.json(category);
+  }
 }
 
 export default new CategoryControllers();

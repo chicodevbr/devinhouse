@@ -14,6 +14,7 @@ routes.delete('/users/:id', UserControllers.destroy);
 
 //category routes
 routes.get('/category', CategoryControllers.index);
+routes.get('/category/:id', CategoryControllers.show);
 routes.post('/category', CategoryControllers.store);
 
 // posts routes

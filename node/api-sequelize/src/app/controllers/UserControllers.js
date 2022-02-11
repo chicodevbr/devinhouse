@@ -18,6 +18,8 @@ class UserControllers {
           },
         },
       ],
+      limit: 10,
+      order: [['name', 'ASC']],
     });
     return res.json(users);
   }
